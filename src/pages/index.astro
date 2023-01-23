@@ -1,0 +1,36 @@
+---
+import Layout from '../layouts/Layout.astro'
+import Card from '../components/Card.astro'
+---
+
+<Layout title="Angelo's Links">
+  <main class='mx-auto my-8 max-w-prose'>
+    <h1 class='text-4xl font-semibold text-neutral-800 dark:text-neutral-50'>Angelo's Links</h1>
+
+    <section class='mt-6'>
+      <h2 class='text-2xl font-medium text-neutral-700 dark:text-neutral-200'>Stalk</h2>
+      <ul class='my-2 flex flex-col gap-4'>
+        <Card title='Fediverse' href='https://flushed.party/@xy' />
+        <Card title='Twitter' href='https://twitter.com/UwUngelo' />
+        <Card title='Résumé' href='https://www.angeloanan.xyz/cv.pdf' />
+      </ul>
+    </section>
+
+    <section class='mt-6'>
+      <h2 class='text-2xl font-medium text-neutral-700 dark:text-neutral-300'>Talk</h2>
+      <ul class='my-2 flex flex-col gap-4'>
+        <Card title='Discord' href='https://discord.com/users/189769721653100546' />
+        <Card title='Keybase' href='https://keybase.io/angeloanan' />
+        <Card title='Telegram' href='https://t.me/angeloanan' />
+      </ul>
+    </section>
+
+    <section class='mt-6'>
+      <h2 class='text-2xl font-medium text-neutral-700 dark:text-neutral-300'>Support</h2>
+      <ul class='my-2 flex flex-col gap-4'>
+        <Card title='GitHub Sponsors' href='https://github.com/sponsors/angeloanan' />
+        <Card title='Ko-fi' href='https://ko-fi.com/angewo' />
+      </ul>
+    </section>
+  </main>
+</Layout>
