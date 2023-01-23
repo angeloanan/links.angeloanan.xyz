@@ -3,7 +3,6 @@ lockfileVersion: 5.4
 specifiers:
   '@astrojs/cloudflare': ^5.0.0
   '@astrojs/node': ^4.0.0
-  '@astrojs/prefetch': ^0.1.1
   '@astrojs/tailwind': 2.1.2
   '@fontsource/inter': ^4.5.15
   '@typescript-eslint/eslint-plugin': ^5.48.2
@@ -32,7 +31,6 @@ dependencies:
 devDependencies:
   '@astrojs/cloudflare': 5.0.0_astro@1.9.2
   '@astrojs/node': 4.0.0_astro@1.9.2
-  '@astrojs/prefetch': 0.1.1
   '@astrojs/tailwind': 2.1.2_tailwindcss@3.2.4
   '@fontsource/inter': 4.5.15
   '@typescript-eslint/eslint-plugin': 5.48.2_caon6io6stgpr7lz2rtbhekxqy
@@ -155,12 +153,6 @@ packages:
       send: 0.18.0
     transitivePeerDependencies:
       - supports-color
-    dev: true
-
-  /@astrojs/prefetch/0.1.1:
-    resolution: {integrity: sha512-+XZcjivPHTo9thQshDWKnnORHJ1dE6odIzhmKHac2ptwla092eohkiJw7Y31+PYmuJkc3Jp+3AawuCvfqCnQ2Q==}
-    dependencies:
-      throttles: 1.0.1
     dev: true
 
   /@astrojs/prism/1.0.2:
@@ -5661,11 +5653,6 @@ packages:
 
   /text-table/0.2.0:
     resolution: {integrity: sha512-N+8UisAXDGk8PFXP4HAzVR9nbfmVJ3zYLAWiTIoqC5v5isinhr+r5uaO8+7r3BMfuNIufIsA7RdpVgacC2cSpw==}
-    dev: true
-
-  /throttles/1.0.1:
-    resolution: {integrity: sha512-fab7Xg+zELr9KOv4fkaBoe/b3L0GMGLd0IBSCn16GoE/Qx6/OfCr1eGNyEcDU2pUA79qQfZ8kPQWlRuok4YwTw==}
-    engines: {node: '>=6'}
     dev: true
 
   /tiny-glob/0.2.9:
