@@ -1,36 +1,88 @@
 ---
 import Layout from '../layouts/Layout.astro'
 import Card from '../components/Card.astro'
+import { Image } from 'astro:assets'
+import PFPImage from '../assets/wobblob.png'
+import {
+  siDiscord,
+  siGithubsponsors,
+  siKeybase,
+  siKofi,
+  siLinkedin,
+  siMastodon,
+  siTelegram,
+  siTwitter,
+  siYoutube
+} from 'simple-icons'
 ---
 
 <Layout>
   <main class='mx-auto my-8 max-w-prose px-4 md:px-0'>
-    <h1 class='text-4xl font-semibold text-neutral-800 dark:text-neutral-50'>Angelo's Links</h1>
+    <header class='flex gap-3'>
+      <Image src={PFPImage} alt="Xy's profile picture" class='h-16 w-16 rounded-full' />
+      <div class='text-neutral-100'>
+        <h1 class='text-2xl font-bold'>Xy Hy</h1>
+        <p class='text-lg font-medium text-neutral-400'>
+          Software engineer and community manager based in the Netherlands
+        </p>
+      </div>
+    </header>
 
     <section class='mt-6'>
-      <h2 class='text-2xl font-medium text-neutral-700 dark:text-neutral-200'>Stalk</h2>
-      <ul class='my-2 flex flex-col gap-4'>
-        <Card title='Fediverse' href='https://flushed.party/@xy' />
-        <Card title='Twitter' href='https://twitter.com/UwUngelo' />
-        <Card title='YouTube' href='https://youtube.com/@angeloanan' />
-        <Card title='Résumé' href='https://www.angeloanan.xyz/cv.pdf' />
+      <h2 class='text-lg font-semibold text-neutral-700 dark:text-neutral-200'>
+        Stalk me &DownArrow;
+      </h2>
+      <ul class='my-2 grid grid-cols-2 flex-col gap-4'>
+        <Card
+          icon={siMastodon}
+          title='Fediverse'
+          body='@xy@flushed.party'
+          href='https://flushed.party/@xy'
+        />
+        <Card
+          icon={siTwitter}
+          title='Twitter'
+          body='@UwUngelo'
+          href='https://twitter.com/UwUngelo'
+        />
+        <Card
+          icon={siYoutube}
+          title='YouTube'
+          body='@angeloanan'
+          href='https://youtube.com/@angeloanan'
+        />
+        <Card
+          icon={siLinkedin}
+          title='LinkedIn'
+          body='angeloanan'
+          href='https://linkedin.com/in/angeloanan'
+        />
       </ul>
     </section>
 
     <section class='mt-6'>
-      <h2 class='text-2xl font-medium text-neutral-700 dark:text-neutral-300'>Talk</h2>
+      <h2 class='text-lg font-medium text-neutral-700 dark:text-neutral-300'>Talk and connect with me &DownArrow;</h2>
       <ul class='my-2 flex flex-col gap-4'>
-        <Card title='Discord' href='https://discord.com/users/189769721653100546' />
-        <Card title='Keybase' href='https://keybase.io/angeloanan' />
-        <Card title='Telegram' href='https://t.me/angeloanan' />
+        <Card
+          icon={siDiscord}
+          title='Discord'
+          body='@e926'
+          href='https://discord.com/users/189769721653100546'
+        />
+        <Card icon={siKeybase} title='Keybase' href='https://keybase.io/angeloanan' />
+        <Card icon={siTelegram} title='Telegram' href='https://t.me/angeloanan' />
       </ul>
     </section>
 
     <section class='mt-6'>
-      <h2 class='text-2xl font-medium text-neutral-700 dark:text-neutral-300'>Support</h2>
+      <h2 class='text-lg font-medium text-neutral-700 dark:text-neutral-300'>Support me</h2>
       <ul class='my-2 flex flex-col gap-4'>
-        <Card title='GitHub Sponsors' href='https://github.com/sponsors/angeloanan' />
-        <Card title='Ko-fi' href='https://ko-fi.com/angewo' />
+        <Card
+          icon={siGithubsponsors}
+          title='GitHub Sponsors'
+          href='https://github.com/sponsors/angeloanan'
+        />
+        <Card icon={siKofi} title='Ko-fi' href='https://ko-fi.com/angewo' />
       </ul>
     </section>
   </main>

@@ -1,20 +1,38 @@
 ---
+import { SimpleIcon } from 'simple-icons'
+
 export interface Props {
   title: string
   body?: string
   href: string
+  icon?: SimpleIcon
 }
 
-const { href, title, body } = Astro.props
+const { href, title, body, icon } = Astro.props
 ---
 
 <li
-  class='flex rounded-xl border-4 bg-neutral-100 bg-[length:400%] text-neutral-900 transition-all ease-in-out hover:-translate-y-1 hover:shadow-md dark:border-neutral-700 dark:bg-neutral-800 dark:text-indigo-50'
+  class='shadow-neutral flex rounded-xl border border-neutral-700 bg-neutral-900 bg-[length:400%] text-neutral-100 shadow-sm shadow-neutral-800 transition-colors ease-in-out hover:bg-neutral-800'
 >
-  <a href={href} class='h-full w-full p-4'>
-    <h2 class='text-xl font-medium'>
-      {title}
-    </h2>
-    {body && <p class='text-neutral-700'>{body}</p>}
+  <a href={href} class='flex h-full w-full'>
+    {
+      icon && (
+        <div
+          class='flex items-center justify-center rounded-l-xl p-4'
+          style={{ backgroundColor: '#' + icon.hex }}
+        >
+          <svg xmlns='http://www.w3.org/2000/svg' class='h-4 w-4' fill='#fff' viewBox='0 0 24 24'>
+            <title>{icon.title}</title>
+            <path d={icon.path} />
+          </svg>
+        </div>
+      )
+    }
+    <div class='h-full w-full justify-center p-4'>
+      <h2 class='font-semibold'>
+        {title}
+      </h2>
+      {body && <p class='text-sm text-neutral-400'>{body}</p>}
+    </div>
   </a>
 </li>
