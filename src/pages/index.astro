@@ -4,15 +4,18 @@ import Card from '../components/Card.astro'
 import { Image } from 'astro:assets'
 import PFPImage from '../assets/wobblob.png'
 import {
+  siBluesky,
   siDiscord,
+  siExpress,
+  siGithub,
   siGithubsponsors,
+  siInstagram,
   siKeybase,
   siKofi,
   siLinkedin,
-  siMastodon,
-  siTelegram,
-  siTwitter,
-  siYoutube
+  siRss,
+  siSignal,
+  siTelegram
 } from 'simple-icons'
 ---
 
@@ -21,35 +24,27 @@ import {
     <header class='flex gap-3'>
       <Image src={PFPImage} alt="Xy's profile picture" class='h-16 w-16 rounded-full' />
       <div class='text-neutral-100'>
-        <h1 class='text-2xl font-bold'>Xy Hy</h1>
+        <h1 class='text-2xl font-bold'>Xy</h1>
         <p class='text-lg font-medium text-neutral-400'>
-          Software engineer and community manager based in the Netherlands
+          Senior web & systems programming focused software developer; hobbyist community manager
         </p>
       </div>
     </header>
 
     <section class='mt-6'>
-      <h2 class='text-lg font-semibold text-neutral-700 dark:text-neutral-200'>
-        Stalk me &DownArrow;
-      </h2>
-      <ul class='my-2 grid sm:grid-cols-2 flex-col gap-4'>
+      <h2 class='text-lg font-semibold text-neutral-700 dark:text-neutral-200'>Stalk me</h2>
+      <ul class='my-2 grid flex-col gap-4 sm:grid-cols-2'>
         <Card
-          icon={siMastodon}
-          title='Fediverse'
-          body='@xy@flushed.party'
-          href='https://flushed.party/@xy'
+          icon={siBluesky}
+          title='ATProto (Bluesky)'
+          body='@angeloanan.xyz'
+          href='https://bsky.app/profile/did:plc:sil5xxljlas23o3cfkfiis7x'
         />
         <Card
-          icon={siTwitter}
-          title='Twitter'
-          body='@UwUngelo'
-          href='https://twitter.com/UwUngelo'
-        />
-        <Card
-          icon={siYoutube}
-          title='YouTube'
-          body='@angeloanan'
-          href='https://youtube.com/@angeloanan'
+          icon={siGithub}
+          title='GitHub'
+          body='angeloanan'
+          href='https://github.com/angeloanan'
         />
         <Card
           icon={siLinkedin}
@@ -57,18 +52,29 @@ import {
           body='angeloanan'
           href='https://linkedin.com/in/angeloanan'
         />
+        <Card icon={siRss} title='RSS Feed' href='https://angeloanan.xyz/feed.xml' />
       </ul>
     </section>
 
     <section class='mt-6'>
-      <h2 class='text-lg font-medium text-neutral-700 dark:text-neutral-300'>Talk and connect with me &DownArrow;</h2>
+      <h2 class='text-lg font-semibold text-neutral-700 dark:text-neutral-300'>
+        Talk and connect with me
+      </h2>
       <ul class='my-2 flex flex-col gap-4'>
-        <Card
-          icon={siDiscord}
-          title='Discord'
-          body='@e926'
-          href='https://discord.com/users/189769721653100546'
-        />
+        <div class='grid grid-cols-2 gap-4'>
+          <Card
+            icon={siSignal}
+            title='Signal'
+            body='@Xyy.01'
+            href='https://signal.me/#eu/fbYtmpguEP72T3LsmqUR3rv1D5YGIYpCCrU0xKCXgE--LwVru4FNPLqMY3muskCJ'
+          />
+          <Card
+            icon={siDiscord}
+            title='Discord'
+            body='@e926'
+            href='https://discord.com/users/189769721653100546'
+          />
+        </div>
         <Card icon={siKeybase} title='Keybase' href='https://keybase.io/angeloanan' />
         <Card icon={siTelegram} title='Telegram' href='https://t.me/angeloanan' />
       </ul>

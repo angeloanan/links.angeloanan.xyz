@@ -1,4 +1,4 @@
-import { defineConfig } from 'astro/config'
+import { defineConfig, passthroughImageService } from 'astro/config'
 import tailwind from '@astrojs/tailwind'
 
 // https://astro.build/config
@@ -9,13 +9,13 @@ import compress from 'astro-compress'
 // https://astro.build/config
 export default defineConfig({
   integrations: [tailwind(), compress()],
-  experimental: {
-    assets: true
-  }
-  // output: 'server',
+  // output: 'hybrid',
   // adapter: cloudflare({
   //   mode: 'advanced'
-  // })
+  // }),
+  image: {
+    service: passthroughImageService()
+  }
   // adapter: node({
   //   mode: 'standalone'
   // })
